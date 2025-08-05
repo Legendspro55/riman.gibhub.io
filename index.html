@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIMAN - Belleza Coreana</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  
+<nav class="navbar">
+  <div class="logo">RIMAN</div>
+  <ul class="nav-links">
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#testimonios">Testimonios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</nav>
+
+  <!-- SECCIÓN 1: CABECERA -->
+  <header class="hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/bg-loop.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text" data-sr>
+      <h1>Transforma tu piel y cabello</h1>
+      <p>Descubre el secreto de la belleza coreana con RIMAN.</p>
+      <a href="#productos" class="btn-principal">¡Explora nuestros productos!</a>
+    </div>
+  </header>
+
+  <!-- SECCIÓN 2: PROBLEMA Y SOLUCIÓN -->
+  <section class="problema" data-sr>
+    <div class="container">
+      <h2>¿Tu piel ha perdido su brillo?</h2>
+      <p>¿Buscas una solución real contra el envejecimiento o la resequedad? RIMAN combina naturaleza + ciencia para transformar tu piel desde adentro.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: PRODUCTOS DESTACADOS -->
+  <section id="productos" class="productos" data-sr>
+    <h2>Productos Destacados</h2>
+    <div class="galeria">
+      <div class="producto">
+        <img src="assets/booseboo.jpg" alt="BooSeBoo Booster y Serum">
+        <h3>Dermatology Booster & Serum</h3>
+        <p>Reduce líneas finas, mejora elasticidad y nutre profundamente.</p>
+        <ul>
+          <li>Con NMNA y Fillerstin™</li>
+          <li>Fuerza, brillo y protección diaria</li>
+        </ul>
+        <span class="precio">$90</span>
+        <a href="#" class="btn-comprar">¡Compra el tuyo ahora!</a>
+      </div>
+      <div class="producto">
+        <img src="assets/collagen-mask.jpg" alt="Collagen Melting Mask">
+        <h3>Collagen 100 Melting Mask</h3>
+        <p>Mascarilla de colágeno puro que se funde con tu piel.</p>
+        <ul>
+          <li>100% colágeno de Nueva Zelanda</li>
+          <li>Firmeza y suavidad visibles</li>
+        </ul>
+        <span class="precio">$60</span>
+        <a href="#" class="btn-comprar">¡Añade esta mascarilla!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: TESTIMONIOS -->
+  <section class="testimonios" data-sr>
+    <h2>Resultados Reales</h2>
+    <div class="carousel">
+      <blockquote>“Mi piel nunca se había sentido tan hidratada. El BooSeBoo es un antes y después para mí.”</blockquote>
+      <blockquote>“La Collagen Mask me dio firmeza inmediata. ¡Increíble!”</blockquote>
+    </div>
+    <div class="certificaciones">
+      <img src="assets/dermatest.png" alt="Certificación Derma Test">
+      <img src="assets/crueltyfree.png" alt="Cruelty Free">
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: LLAMADO A LA ACCIÓN FINAL -->
+  <section class="cta-final" data-sr>
+    <h2>Comienza tu transformación hoy mismo</h2>
+    <p>La belleza es una inversión. Nuestro "Essential Riman Ritual" está a solo $205.</p>
+    <a href="#" class="btn-grande">¡DESCUBRE NUESTROS KITS Y COMPRA AHORA!</a>
+    <a href="https://t.me/Hanachoi_bot" class="btn-secundario">¿Necesitas ayuda personalizada? ¡Habla con Hana Choi!</a>
+  </section>
+
+  <!-- SECCIÓN 6: FOOTER -->
+  <footer class="footer">
+    <p>RIMAN.COM - Belleza por Veganology®</p>
+    <nav>
+      <a href="#">Políticas de Privacidad</a>
+      <a href="#">Términos y Condiciones</a>
+    </nav>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('[data-sr]', {
+      distance: '40px',
+      duration: 900,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      interval: 100
+    });
+  </script>
+
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    burger.classList.toggle('toggle');
+  });
+</script>
+
+</body>
+</html>
